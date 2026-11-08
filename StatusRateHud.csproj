@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>StatusRateHud</AssemblyName>
+    <GameDir Condition="'$(GameDir)' == ''">$(TLD_GAME_DIR)</GameDir>
+  </PropertyGroup>
+  <Target Name="ValidateGameReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(GameDir)/MelonLoader/Il2CppAssemblies/Assembly-CSharp.dll')" Text="Set GameDir to your local TheLongDark folder after running it with MelonLoader." />
+    <Error Condition="!Exists('$(GameDir)/Mods/ModSettings.dll')" Text="Install ModSettings in the game's Mods folder first." />
+  </Target>
+  <ItemGroup>
+    <Compile Include="StatusRateHud.cs;RateMeter.cs;Translations.cs;LocalizationPatch.cs" />
+    <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/*.dll" Exclude="$(GameDir)/MelonLoader/Il2CppAssemblies/System.*.dll;$(GameDir)/MelonLoader/Il2CppAssemblies/mscorlib.dll;$(GameDir)/MelonLoader/Il2CppAssemblies/netstandard.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MelonLoader"><HintPath>$(GameDir)/MelonLoader/net6/MelonLoader.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.Runtime"><HintPath>$(GameDir)/MelonLoader/net6/Il2CppInterop.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(GameDir)/MelonLoader/net6/0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="ModSettings"><HintPath>$(GameDir)/Mods/ModSettings.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>
+
