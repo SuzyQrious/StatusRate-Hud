@@ -30,13 +30,13 @@ MelonLoaderとModSettingsは別途導入が必要です。他のゲームバー�
 
 1. ゲームを終了します。
 2. ゲームの `tld.exe` にMelonLoaderを導入し、`Mods` に `ModSettings.dll` を配置します。
-3. [Releases](https://github.com/SuzyQrious/StatusRate-Hud/releases)から **StatusRateHUD-1.3.2.zip** をダウンロードします。
-4. ZIPをゲームのインストール先へ展開します。
+3. [Releases](https://github.com/SuzyQrious/StatusRate-Hud/releases)から **StatusRateHud.dll** をダウンロードします。
+4. `StatusRateHud.dll` をゲームのインストール先の `Mods` フォルダーへ入れます。
 
 最終的な配置：`TheLongDark\Mods\StatusRateHud.dll`
 
 Steamの「管理 → ローカルファイルを閲覧」でインストール先を開けます。
-GitHubの **Source code** は開発用ソースです。導入には名前付きの配布ZIPを使用してください。
+GitHubの **Source code** は開発用ソースです。導入には `StatusRateHud.dll` を使用してください。
 
 ## 設定とプレビュー
 
@@ -61,3 +61,4 @@ Windowsの言語ではなくゲーム内言語に連動します。MOD名はす�
 1.3.2は実機でユーザー確認済みです。計算と翻訳データの自動テストは、通常環境とMelonLoaderと同じ多言語処理制約下の両方で合格しています。
 
 開発用のビルド・テスト方法は[英語README](README.md#build-from-source)、更新履歴は[CHANGELOG](CHANGELOG.md)を参照してください。
+

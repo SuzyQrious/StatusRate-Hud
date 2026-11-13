@@ -33,8 +33,8 @@ MelonLoader and ModSettings must be installed separately. They are not bundled. 
 
 1. Close the game.
 2. Install MelonLoader for the game's `tld.exe`, then install `ModSettings.dll` in the game's `Mods` folder.
-3. Download **StatusRateHUD-1.3.2.zip** from [Releases](https://github.com/SuzyQrious/StatusRate-Hud/releases).
-4. Extract the archive into the game installation folder, merging its `Mods` folder.
+3. Download **StatusRateHud.dll** from [Releases](https://github.com/SuzyQrious/StatusRate-Hud/releases).
+4. Place `StatusRateHud.dll` directly in the game installation folder's `Mods` folder.
 
 ```text
 TheLongDark/
@@ -45,7 +45,7 @@ TheLongDark/
 
 Steam: right-click the game → **Manage → Browse local files** to find the installation folder.
 
-Download the named release ZIP, not GitHub's automatically generated **Source code** archives. The source archives contain code, not an installable DLL.
+Download `StatusRateHud.dll`, not GitHub's automatically generated **Source code** archives. The source archives contain code, not an installable DLL.
 
 ## Settings and preview
 
@@ -87,4 +87,5 @@ dotnet run --project StatusRateHud.Tests.csproj -c Release -p:InvariantGlobaliza
 Tests cover real-time sampling, pause/recovery/acceleration, language aliases, fallback and numeric formatting. Version 1.3.2 was also tested in-game by the user. Full visual QA in every language is still pending.
 
 See [CHANGELOG](CHANGELOG.md) for version history. This is an unofficial mod, not affiliated with Hinterland.
+
 
